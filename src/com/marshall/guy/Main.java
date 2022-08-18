@@ -52,20 +52,21 @@ public class Main {
 
         if (choice.equals(BigInteger.valueOf(1))) {
             //do loop through numbers up to range and do collatz on those
+            BigInteger counter = BigInteger.ONE;
+            for (; counter.compareTo(userInput) <= 0; counter = counter.add(BigInteger.ONE)) {
+                if (maxSteps.compareTo(collatz_bigint(counter)) < 0) {
+                    maxSteps = collatz_bigint(counter);
+                    maxNumber = counter;
+                }
+            }
 
+            System.out.printf("%d had the maximum number of steps at %d", maxNumber, maxSteps);
         } else if (choice.equals(BigInteger.valueOf(2))) {
             //do collatz for number entered and return number of steps and max number reached
+            System.out.printf("%d had %d steps%n", userInput, collatz_bigint(userInput));
         } else {
             System.out.println("Invalid option. Please try again.");
             System.exit(0);
         }
-//        BigInteger counter = BigInteger.ONE;
-//        for (; counter.compareTo(userInput) <= 0; counter = counter.add(BigInteger.ONE)) {
-//            if (maxSteps.compareTo(collatz(counter)) < 0) {
-//                maxSteps = collatz(counter);
-//                maxNumber = counter;
-//            }
-//        }
-//        System.out.printf("%d had the maximum number of steps at %d", maxNumber, maxSteps);
     }
 }
