@@ -43,14 +43,22 @@ public class Main {
         System.out.println("1 - Maximum number of steps for a range up to the input");
         System.out.println("2 - Number of steps and maximum number reached for the input");
         System.out.print("Enter your choice (1 OR 2): ");
-        int choice = scanner.nextInt();
+        BigInteger choice = scanner.nextBigInteger();
 
         System.out.print("Enter a positive integer: ");
-        int userInput = scanner.nextInt();
+        BigInteger userInput = scanner.nextBigInteger();
+        BigInteger maxNumber = BigInteger.ZERO;
+        BigInteger maxSteps = BigInteger.ZERO;
 
-//        BigInteger maxNumber = BigInteger.ZERO;
-//        BigInteger maxSteps = BigInteger.ZERO;
-//
+        if (choice.equals(BigInteger.valueOf(1))) {
+            //do loop through numbers up to range and do collatz on those
+
+        } else if (choice.equals(BigInteger.valueOf(2))) {
+            //do collatz for number entered and return number of steps and max number reached
+        } else {
+            System.out.println("Invalid option. Please try again.");
+            System.exit(0);
+        }
 //        BigInteger counter = BigInteger.ONE;
 //        for (; counter.compareTo(userInput) <= 0; counter = counter.add(BigInteger.ONE)) {
 //            if (maxSteps.compareTo(collatz(counter)) < 0) {
@@ -58,21 +66,6 @@ public class Main {
 //                maxNumber = counter;
 //            }
 //        }
-//
 //        System.out.printf("%d had the maximum number of steps at %d", maxNumber, maxSteps);
-
-        //if userInput is above maybe 100000 (need to check), use bigint function (slower, but has the size required)
-
-        switch (choice) {
-            case 1:
-                //do loop through numbers up to range and do collatz on those
-                break;
-            case 2:
-                //do collatz for number entered and return number of steps and max number reached
-                break;
-            default:
-                System.out.println("Invalid option. Please try again.");
-                System.exit(0);
-        }
     }
 }
