@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static BigInteger collatz(BigInteger number) {
+    //implement collatz function using int (for performance)
+    public static BigInteger collatz_bigint(BigInteger number) {
         BigInteger counter = BigInteger.ZERO;
 //        if even, divide by 2
 //        else times by 3 and add 1
@@ -30,18 +31,6 @@ public class Main {
         System.out.print("Enter your choice (1 OR 2): ");
         int choice = scanner.nextInt();
 
-        switch (choice) {
-            case 1:
-                //do loop through numbers up to range and do collatz on those
-                break;
-            case 2:
-                //do collatz for number entered and return number of steps and max number reached
-                break;
-            default:
-                System.out.println("Invalid option. Please try again.");
-                System.exit(0);
-        }
-
 //        System.out.print("Enter a positive integer: ");
 //        BigInteger userInput = scanner.nextBigInteger();
 //
@@ -57,5 +46,19 @@ public class Main {
 //        }
 //
 //        System.out.printf("%d had the maximum number of steps at %d", maxNumber, maxSteps);
+
+        //if userInput is above maybe 100000 (need to check), use bigint function (slower, but has the size required)
+
+        switch (choice) {
+            case 1:
+                //do loop through numbers up to range and do collatz on those
+                break;
+            case 2:
+                //do collatz for number entered and return number of steps and max number reached
+                break;
+            default:
+                System.out.println("Invalid option. Please try again.");
+                System.exit(0);
+        }
     }
 }
