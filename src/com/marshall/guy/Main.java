@@ -3,13 +3,27 @@ package com.marshall.guy;
 import java.math.BigInteger;
 import java.util.Scanner;
 
+//        if even, divide by 2
+//        else times by 3 and add 1
+
 public class Main {
 
     //implement collatz function using int (for performance)
+    public static int collatz(int number) {
+        int counter = 0;
+        while (number > 1) {
+            counter++;
+            if (number % 2 == 0) {
+                number /= 2;
+            } else {
+                number = (number * 3) + 1;
+            }
+        }
+
+        return counter;
+    }
     public static BigInteger collatz_bigint(BigInteger number) {
         BigInteger counter = BigInteger.ZERO;
-//        if even, divide by 2
-//        else times by 3 and add 1
         while (number.compareTo(BigInteger.ONE) > 0) {
             counter = counter.add(BigInteger.ONE);
             if (number.mod(BigInteger.TWO).equals(BigInteger.ZERO)) {
@@ -31,9 +45,9 @@ public class Main {
         System.out.print("Enter your choice (1 OR 2): ");
         int choice = scanner.nextInt();
 
-//        System.out.print("Enter a positive integer: ");
-//        BigInteger userInput = scanner.nextBigInteger();
-//
+        System.out.print("Enter a positive integer: ");
+        int userInput = scanner.nextInt();
+
 //        BigInteger maxNumber = BigInteger.ZERO;
 //        BigInteger maxSteps = BigInteger.ZERO;
 //
