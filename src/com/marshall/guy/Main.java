@@ -31,7 +31,6 @@ public class Main {
             } else {
                 number = number.multiply(BigInteger.valueOf(3)).add(BigInteger.ONE);
             }
-            System.out.println(number);
         }
 
         return counter;
