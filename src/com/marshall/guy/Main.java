@@ -7,7 +7,7 @@ import java.util.Scanner;
 //        else times by 3 and add 1
 
 public class Main {
-    public static BigInteger collatz_bigint(BigInteger number) {
+    public static BigInteger collatz(BigInteger number) {
         BigInteger counter = BigInteger.ZERO;
         while (number.compareTo(BigInteger.ONE) > 0) {
             counter = counter.add(BigInteger.ONE);
@@ -26,6 +26,6 @@ public class Main {
 
         System.out.print("Enter a positive integer: ");
         BigInteger userInput = scanner.nextBigInteger();
-        System.out.printf("%d had %d steps%n", userInput, collatz_bigint(userInput));
+        System.out.printf("%d had %d steps%n", userInput, collatz(userInput));
     }
 }
