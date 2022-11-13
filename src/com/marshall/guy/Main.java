@@ -31,6 +31,7 @@ public class Main {
             } else {
                 number = number.multiply(BigInteger.valueOf(3)).add(BigInteger.ONE);
             }
+            System.out.println(number);
         }
 
         return counter;
@@ -54,8 +55,9 @@ public class Main {
             //do loop through numbers up to range and do collatz on those
             BigInteger counter = BigInteger.ONE;
             for (; counter.compareTo(userInput) <= 0; counter = counter.add(BigInteger.ONE)) {
-                if (maxSteps.compareTo(collatz_bigint(counter)) < 0) {
-                    maxSteps = collatz_bigint(counter);
+                BigInteger result = collatz_bigint(counter);
+                if (maxSteps.compareTo(result) < 0) {
+                    maxSteps = result;
                     maxNumber = counter;
                 }
             }
