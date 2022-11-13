@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6e28200-4c0f-4c73-b16e-66c03c848127" name="Changes" comment="Remove print statement in collatz_bigint()">
+    <list default="true" id="a6e28200-4c0f-4c73-b16e-66c03c848127" name="Changes" comment="Rename collatz_bigint to collatz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/collatzConjecture_jar/collatzConjecture.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/collatzConjecture_jar/collatzConjecture.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/collatzConjecture/com/marshall/guy/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/collatzConjecture/com/marshall/guy/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/marshall/guy/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/marshall/guy/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +69,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668376397393</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Simplify codebase significantly">
+      <created>1668376601799</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668376601799</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Rename collatz_bigint to collatz">
+      <created>1668376747024</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668376747024</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,6 +102,8 @@
     <MESSAGE value="Updated codebase - 2022.11.13" />
     <MESSAGE value="Remove duplicate function call in for loop for efficiency" />
     <MESSAGE value="Remove print statement in collatz_bigint()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove print statement in collatz_bigint()" />
+    <MESSAGE value="Simplify codebase significantly" />
+    <MESSAGE value="Rename collatz_bigint to collatz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename collatz_bigint to collatz" />
   </component>
 </project>

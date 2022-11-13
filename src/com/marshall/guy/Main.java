@@ -1,6 +1,10 @@
 package com.marshall.guy;
 
 import java.math.BigInteger;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 //        if even, divide by 2
@@ -14,18 +18,22 @@ public class Main {
             if (number.mod(BigInteger.TWO).equals(BigInteger.ZERO)) {
                 number = number.divide(BigInteger.TWO);
             } else {
-                number = number.multiply(BigInteger.valueOf(3)).add(BigInteger.ONE);
+                number = number.multiply(BigInteger.valueOf(3)).add(BigInteger.ONE).divide(BigInteger.TWO);
             }
+            NumberFormat formatter = new DecimalFormat("0.######E0", DecimalFormatSymbols.getInstance(Locale.ROOT));
+            String resultFormatted = formatter.format(number);
+            System.out.println(resultFormatted);
         }
 
         return counter;
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter a positive integer: ");
-        BigInteger userInput = scanner.nextBigInteger();
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter a positive integer: ");
+//        BigInteger userInput = scanner.nextBigInteger();
+        BigInteger userInput = BigInteger.valueOf(2).pow(100000).subtract(BigInteger.ONE);
         System.out.printf("%d had %d steps%n", userInput, collatz(userInput));
     }
 }
