@@ -20,15 +20,13 @@ public class Main {
             } else {
                 number = number.multiply(BigInteger.valueOf(3)).add(BigInteger.ONE).divide(BigInteger.TWO);
             }
-            String resultFormatted = formatter.format(number);
-            System.out.println(resultFormatted);
         }
 
         return counter;
     }
 
     public static void main(String[] args) {
-        BigInteger userInput = BigInteger.valueOf(2).pow(1000).subtract(BigInteger.ONE);
+        BigInteger userInput = BigInteger.valueOf(2).pow(10000).subtract(BigInteger.ONE);
 
         String resultFormatted = formatter.format(userInput);
         System.out.printf("%s had %d steps%n", resultFormatted, collatz(userInput));
