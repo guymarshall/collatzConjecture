@@ -11,6 +11,7 @@ import java.util.Scanner;
 //        else times by 3 and add 1
 
 public class Main {
+    static NumberFormat formatter = new DecimalFormat("0.######E0", DecimalFormatSymbols.getInstance(Locale.ROOT));
     public static BigInteger collatz(BigInteger number) {
         BigInteger counter = BigInteger.ZERO;
         while (number.compareTo(BigInteger.ONE) > 0) {
@@ -20,7 +21,6 @@ public class Main {
             } else {
                 number = number.multiply(BigInteger.valueOf(3)).add(BigInteger.ONE).divide(BigInteger.TWO);
             }
-            NumberFormat formatter = new DecimalFormat("0.######E0", DecimalFormatSymbols.getInstance(Locale.ROOT));
             String resultFormatted = formatter.format(number);
             System.out.println(resultFormatted);
         }
@@ -33,7 +33,11 @@ public class Main {
 //
 //        System.out.print("Enter a positive integer: ");
 //        BigInteger userInput = scanner.nextBigInteger();
-        BigInteger userInput = BigInteger.valueOf(2).pow(100000).subtract(BigInteger.ONE);
-        System.out.printf("%d had %d steps%n", userInput, collatz(userInput));
+
+//        BigInteger userInput = BigInteger.valueOf(2).pow(100000).subtract(BigInteger.ONE);
+        BigInteger userInput = BigInteger.valueOf(2).pow(1000).subtract(BigInteger.ONE);
+
+        String resultFormatted = formatter.format(userInput);
+        System.out.printf("%s had %d steps%n", resultFormatted, collatz(userInput));
     }
 }
