@@ -5,7 +5,6 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
-import java.util.Scanner;
 
 //        if even, divide by 2
 //        else times by 3 and add 1
@@ -29,12 +28,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.print("Enter a positive integer: ");
-//        BigInteger userInput = scanner.nextBigInteger();
-
-//        BigInteger userInput = BigInteger.valueOf(2).pow(100000).subtract(BigInteger.ONE);
         BigInteger userInput = BigInteger.valueOf(2).pow(1000).subtract(BigInteger.ONE);
 
         String resultFormatted = formatter.format(userInput);
