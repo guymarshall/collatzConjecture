@@ -28,6 +28,7 @@ public class Main {
     public static void main(String[] args) {
         BigInteger userInput = BigInteger.valueOf(2).pow(1000000).subtract(BigInteger.ONE);
         // 2^200000 - 1 = 9.980052E60205 had 1728481 steps
+        // 2^1000000 - 1 = 9.900656E301029 has 8615753 steps
 
         String resultFormatted = formatter.format(userInput);
         System.out.printf("%s had %d steps%n", resultFormatted, collatz(userInput));
