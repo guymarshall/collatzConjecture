@@ -12,7 +12,7 @@ public class Collatz {
         {
             counter = counter.add(BigInteger.ONE);
 
-            if (number.mod(BigInteger.TWO).equals(BigInteger.ZERO))
+            if (!number.testBit(0))
             {
                 number = number.divide(BigInteger.TWO);
             }
