@@ -1,5 +1,4 @@
 import java.math.BigInteger;
-import java.util.HashMap;
 
 public class Main
 {
@@ -9,11 +8,9 @@ public class Main
         final BigInteger finish = BigInteger.valueOf(1000000);
         BigInteger number = start;
 
-        HashMap<BigInteger, BigInteger> steps = new HashMap<>();
-
-        while (number.compareTo(finish) < 0)
+        while (number.compareTo(finish) <= 0)
         {
-            System.out.printf("Number: %d, Steps: %d%n", number, Collatz.collatz(number, steps));
+            System.out.printf("Number: %d, Steps: %d%n", number, Collatz.collatz(number));
             number = number.add(BigInteger.ONE);
         }
     }
