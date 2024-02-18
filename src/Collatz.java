@@ -2,6 +2,7 @@ import java.math.BigInteger;
 import java.util.HashMap;
 
 public class Collatz {
+    public final static BigInteger THREE = BigInteger.valueOf(3);
     public static BigInteger collatz(BigInteger number, HashMap<BigInteger, BigInteger> steps)
     {
         BigInteger counter = BigInteger.ZERO;
@@ -23,7 +24,7 @@ public class Collatz {
             }
             else
             {
-                number = ((BigInteger.valueOf(3).multiply(number)).add(BigInteger.ONE)).divide(BigInteger.TWO);
+                number = ((THREE.multiply(number)).add(BigInteger.ONE)).divide(BigInteger.TWO);
             }
         }
 
