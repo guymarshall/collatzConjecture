@@ -29,3 +29,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Project Files ###
+collatz_data.csv
+src/META-INF/
