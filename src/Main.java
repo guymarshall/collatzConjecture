@@ -19,6 +19,12 @@ public class Main
         {
             BigInteger steps = Collatz.collatz(number);
 
+            if (!number.testBit(0))
+            {
+                number = number.add(BigInteger.ONE);
+                continue;
+            }
+
             if (steps.compareTo(highestSteps) > 0)
             {
                 highestSteps = new BigInteger(steps.toString());

@@ -4,7 +4,9 @@ public class Collatz {
     public final static BigInteger THREE = BigInteger.valueOf(3);
     public static BigInteger collatz(BigInteger number)
     {
-        BigInteger counter = BigInteger.ZERO;
+        BigInteger counter = BigInteger.ONE;
+
+        number = ((THREE.multiply(number)).add(BigInteger.ONE)).divide(BigInteger.TWO);
 
         // if even, divide by 2
         // else times by 3 and add 1
