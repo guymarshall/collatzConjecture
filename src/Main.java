@@ -11,8 +11,15 @@ public class Main
 
         if (result[0] != null && result[1] != null)
         {
-            number = result[0];
-            highestSteps = result[1];
+            if (result[0].compareTo(number) > 0)
+            {
+                number = result[0];
+            }
+
+            if (result[1].compareTo(highestSteps) > 0)
+            {
+                highestSteps = result[1];
+            }
         }
 
         while (true)
