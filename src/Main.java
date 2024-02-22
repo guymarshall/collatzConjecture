@@ -28,7 +28,7 @@ public class Main
             if (steps.compareTo(highestSteps) > 0)
             {
                 highestSteps = new BigInteger(steps.toString());
-                System.out.printf("Number: %d, Steps: %d%n", number, highestSteps);
+                System.out.printf("Number: %,d, Steps: %,d%n", number, highestSteps);
                 FileUtilities.writeToFile("collatz_data.csv", number, highestSteps);
             }
             number = number.add(BigInteger.ONE);
